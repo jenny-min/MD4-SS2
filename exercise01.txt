@@ -1,6 +1,4 @@
-# 📘 Thiết kế kiến trúc RESTful và Quy tắc đặt tên
-
----
+[Bài tập] Thiết kế kiến trúc RESTful và Quy tắc đặt tên
 
 Phần 1:
 Trong ứng dụng Quản lý nhân sự, việc lựa chọn kiến trúc REST thay vì SOAP là hợp lý vì các lý do sau:
