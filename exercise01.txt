@@ -1,0 +1,20 @@
+# 📘 Thiết kế kiến trúc RESTful và Quy tắc đặt tên
+
+---
+
+Phần 1:
+Trong ứng dụng Quản lý nhân sự, việc lựa chọn kiến trúc REST thay vì SOAP là hợp lý vì các lý do sau:
+
+- Tính linh hoạt: REST sử dụng các phương thức HTTP tiêu chuẩn (GET, POST, PUT, DELETE), giúp dễ dàng tích hợp với nhiều loại client như Web, Mobile.
+- Định dạng nhẹ (JSON): REST thường sử dụng JSON thay vì XML (của SOAP), giúp giảm dung lượng dữ liệu truyền tải → tăng tốc độ xử lý.
+- Hiệu năng tốt hơn: JSON nhẹ hơn XML, không cần các cấu trúc phức tạp như SOAP Envelope → giảm overhead.
+- Dễ phát triển và bảo trì: REST đơn giản, dễ đọc, dễ debug hơn SOAP (SOAP thường phức tạp với WSDL, XML schema).
+- Phù hợp hệ thống hiện đại: REST là tiêu chuẩn phổ biến trong các hệ thống Web và Mobile hiện nay.
+
+
+Phần 2: Thiết kế API RESTful|
+1. Lấy danh sách nhân viên: GET /employees
+2. Lấy thông tin 1 nhân viên(theo id): GET /employees/{id}
+3. Tạo mới nhân viên: POST /employees
+4. Cập nhật nhân viên: PUT /employees/{id}
+5. Xóa nhân viên(theo id): DELETE  /employees/{id}               |
