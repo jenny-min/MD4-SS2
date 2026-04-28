@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class EmployeeRepository {
@@ -23,5 +24,21 @@ public class EmployeeRepository {
     public Employee save(Employee employee) {
         employees.add(employee);
         return employee;
+    }
+
+    public Optional<Employee> findById(int id) {
+        return employees.stream().filter(e -> e.getId() == id).findFirst();
+    }
+
+    public void updateEmployee(int id, Employee newEmployee) {
+        findById(id).ifPresent(e -> {
+            e.setFullName(newEmployee.getFullName());
+            e.setEmail(newEmployee.getEmail());
+            e.setDepartement(newEmployee.getDepartement());
+        });
+    }
+
+    public boolean delete(int id) {
+       return employees.removeIf(e -> e.getId() == id);
     }
 }

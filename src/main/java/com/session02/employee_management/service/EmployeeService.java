@@ -29,4 +29,16 @@ public class EmployeeService {
     public Employee addEmployee(Employee employee) {
         return employeeRepository.save(employee);
     }
+
+    public Employee updateEmployee(int id, Employee employee) {
+        if (employeeRepository.findById(id).isPresent()) {
+            employeeRepository.updateEmployee(id, employee);
+            return employee;
+        }
+        return null;
+    }
+
+    public boolean deleteEmployee(int id) {
+        return employeeRepository.delete(id);
+    }
 }
