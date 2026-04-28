@@ -38,6 +38,6 @@ public class EmployeeController {
     @GetMapping("/filter")
     public ResponseEntity<String> filterEmployees(@ModelAttribute EmployeeFilter filter) {
         return ResponseEntity.ok("Đang lọc theo tên " + filter.getName()
-        + "và phòng ban " + filter.getDepartment());
+        + " và phòng ban " + filter.getDepartment());
     }
 }
