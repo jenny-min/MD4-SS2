@@ -25,4 +25,8 @@ public class EmployeeService {
                 .filter(e -> e.getFullName().toLowerCase().contains(name.toLowerCase()))
                 .collect(Collectors.toList());
     }
+
+    public Employee addEmployee(Employee employee) {
+        return employeeRepository.save(employee);
+    }
 }

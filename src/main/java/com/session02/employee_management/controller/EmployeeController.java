@@ -40,4 +40,12 @@ public class EmployeeController {
         return ResponseEntity.ok("Đang lọc theo tên " + filter.getName()
         + " và phòng ban " + filter.getDepartment());
     }
+
+    @PostMapping
+    public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee) {
+        Employee newEmployee = employeeService.addEmployee(employee);
+        return ResponseEntity.ok(newEmployee);
+    }
+
+
 }
